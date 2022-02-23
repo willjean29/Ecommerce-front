@@ -1,6 +1,6 @@
 import axios from "axios";
 import { IAuthResponse } from "store/users/interfaces/user.interface";
-const baseURL = "http://localhost:4000/api";
+const baseURL = process.env.REACT_APP_URL_BACKEND as string;
 const api = axios.create({
   baseURL,
 });
